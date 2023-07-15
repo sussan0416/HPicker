@@ -11,9 +11,7 @@ public struct HPicker<PickerItem>: View
     @Binding var selection: PickerItem
     let items: [PickerItem]
 
-    public init(
-        items: [PickerItem], selection: Binding<PickerItem>,
-        @ViewBuilder content: ((PickerItem) -> some View)) {
+    public init(items: [PickerItem], selection: Binding<PickerItem>) {
         self.items = items
         self._selection = selection
     }
